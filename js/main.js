@@ -88,7 +88,7 @@ function validateForm(){
 	lista();*/
 	function lista(){
 		var seleccion = document.getElementsByTagName('select'); //selecciono por etiqueta select
-		for (var i = 0; i < seleccion.length; ++i){ //recorro la lista de opciones, si no se selecciona ninguna se retorna false
+		for (var i = 0; i < seleccion.length; ++i){ //recorro la lista de opciones, si se selecciona valor por defecto (selecciona tu bici con value "0") se retorna false
 			if(seleccion[i].value === "0"){
 				alert('¡Error! Debe seleccionar una opción');
 				return false;
@@ -97,5 +97,16 @@ function validateForm(){
 		return true;
 	}
 	lista();
+
+	/* nunca funcionó con if
+	
+	function lista() {
+		var seleccion = document.getElementsByTagName('select'); //selecciono por etiqueta select
+		if (seleccion === "0" ) { 
+			alert("Elija una opción");
+			return false;
+		}
+	}
+	lista();*/
 
 }
