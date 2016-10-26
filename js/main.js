@@ -79,10 +79,9 @@ function validateForm(){
 	function lista(){
 		var select = document.getElementsByClassName('form-control').selectedIndex;
 		if( select === null || select === 0 ) {
-			alert('debe seleccionar');
+			alert('¡Error! Debe seleccionar una opción');
 			return false;
 		}else{
-			alert('OK');
 			return true;
 		}
 	}
