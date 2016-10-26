@@ -76,7 +76,7 @@ function validateForm(){
 	password();	
 
 	//list validation
-	function lista(){
+	/*function lista(){
 		var select = document.getElementsByClassName('form-control').selectedIndex;
 		if( select === null || select === 0 ) {
 			alert('¡Error! Debe seleccionar una opción');
@@ -85,5 +85,17 @@ function validateForm(){
 			return true;
 		}
 	}
+	lista();*/
+	function lista(){
+		var seleccion = document.getElementsByTagName('select'); //selecciono por etiqueta select
+		for (var i = 0; i < seleccion.length; ++i){ //recorro la lista de opciones, si no se selecciona ninguna se retorna false
+			if(seleccion[i].value === "0"){
+				alert('¡Error! Debe seleccionar una opción');
+				return false;
+			}
+		} 
+		return true;
+	}
 	lista();
+
 }
