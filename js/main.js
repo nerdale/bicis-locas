@@ -11,10 +11,10 @@ function validateForm(){
 			alert('¡Error! El primer caracter debe ser mayúscula');
 			return false;
 		}else if( /[0-9]/.test(nombre)){
-			alert('¡Error! Sólo debe ingresar letras');
+			alert('¡Error! Sólo debe ingresar letras en el campo nombre');
 			return false;
 		}else{
-			alert('EXIITOOOOO');
+			//alert('El nombre ha sido ingresado correctamente');
 			return true;
 		}
 	}
@@ -30,10 +30,10 @@ function validateForm(){
 			alert('¡Error! El primer caracter debe ser mayúscula');
 			return false;
 		}else if( /[0-9]/.test(apellido)){
-			alert('¡Error! Sólo debe ingresar letras');
+			alert('¡Error! Sólo debe ingresar letras en el campo apellido');
 			return false;			
 		}else{
-			alert('EXIITOOOOO');
+			//alert('El apellido ha sido ingresado correctamente');
 			return true;
 		}
 	}		
@@ -47,7 +47,7 @@ function validateForm(){
 			alert('¡Error! El campo correo no debe estar vacío');
 			return false;
 		}else if (verificar.test(correo)){
-			alert('El correo ' + correo + ' ha sido ingresado correctamente');
+			//alert('El correo ' + correo + ' ha sido ingresado correctamente');
 			return true;
 		}else{
 			alert('¡Error! El correo es incorrecto, por favor ingrese un dato válido');
@@ -69,7 +69,7 @@ function validateForm(){
 			alert('¡Error! Contraseña inválida');
 			return false;
 		}else{
-			alert('Contraseña ingresada con éxito')
+			//alert('La contraseña ha sido ingresado correctamente')
 			return true;			
 		}
 
@@ -83,7 +83,7 @@ function validateForm(){
 			alert('¡Error! debe seleccionar una opción');
 			return false;
 		}else{
-			alert('OK');
+			//alert('La selección ha sido ingresado correctamente');
 			return true;
 		}
 	}
