@@ -59,7 +59,7 @@ function validateForm(){
 	//password validation
 	function password(){
 		var contrasenia = document.getElementById('input-password').value;
-		if(contrasenia == null || contrasenia.length === 0){
+		if(contrasenia === null || contrasenia.length === 0){
 			alert('¡Error! El campo password no debe estar vacío');
 			return false;
 		}else if (contrasenia.length < 6 ) {
@@ -78,12 +78,12 @@ function validateForm(){
 
 	//list validation
 	function lista(){
-		var seleccion = document.getElementByClassName('form-control').value;
-		if(seleccion === null || seleccion === 0){
-			alert('¡Error! debe seleccionar una opción');
+		var select = document.getElementsByClassName('form-control').selectedIndex;
+		if( select === null || select === 0 ) {
+			alert('debe seleccionar');
 			return false;
 		}else{
-			//alert('La selección ha sido ingresado correctamente');
+			alert('OK');
 			return true;
 		}
 	}
