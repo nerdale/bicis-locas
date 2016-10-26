@@ -3,14 +3,13 @@ function validateForm(){
 	//name validation, empty field and first character uppercase
 	function nombre(){
 		var nombre = document.getElementById('name').value;
-		var ver = /^[A-Za-z\_\-\.\s\xF1\xD1]+$/;
 		if (nombre === null || nombre.length === 0){
 			alert('¡Error! El campo nombre no debe estar vacío');
 			return false;
-		}else if(nombre.substring(0,1) !== nombre.substring(0,1).toUpperCase()){
+		}else if(nombre.substring(0,1) !== nombre.substring(0,1).toUpperCase()){ //validación primer caracter === primer caract mayus.
 			alert('¡Error! El primer caracter del campo nombre debe ser mayúscula');
 			return false;
-		}else if( /[0-9]/.test(nombre)){
+		}else if( /[0-9]/.test(nombre)){ //valida sólo letras
 			alert('¡Error! Sólo debe ingresar letras en el campo nombre');
 			return false;
 		}else{
@@ -26,10 +25,10 @@ function validateForm(){
 		if (apellido === null || apellido.length === 0){
 			alert('¡Error! El campo apellido no debe estar vacío');
 			return false;
-		}else if(apellido.substring(0,1) !== apellido.substring(0,1).toUpperCase()){
+		}else if(apellido.substring(0,1) !== apellido.substring(0,1).toUpperCase()){//validación primer caracter === primer caract mayus.
 			alert('¡Error! El primer caracter del campo apellido debe ser mayúscula');
 			return false;
-		}else if( /[0-9]/.test(apellido)){
+		}else if( /[0-9]/.test(apellido)){ //valida sólo letras
 			alert('¡Error! Sólo debe ingresar letras en el campo apellido');
 			return false;			
 		}else{
@@ -42,7 +41,7 @@ function validateForm(){
 	//email validation 
 	function correo(){
 		var correo = document.getElementById('input-email').value;
-		var verificar = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+		var verificar = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/; //acepta todo tipo de correo incluidos puntos entremedio
 		if( correo === null || correo.length === 0){
 			alert('¡Error! El campo correo no debe estar vacío');
 			return false;
@@ -62,10 +61,10 @@ function validateForm(){
 		if(contrasenia === null || contrasenia.length === 0){
 			alert('¡Error! El campo password no debe estar vacío');
 			return false;
-		}else if (contrasenia.length < 6 ) {
+		}else if (contrasenia.length < 6 ) { //valida largo contraseña
 			alert('¡Error! La contraseña debe tener al menos 6 caracteres');
 			return false;
-		}else if(contrasenia === 'password' || contrasenia === '123456' || contrasenia === '098754'){
+		}else if(contrasenia === 'password' || contrasenia === '123456' || contrasenia === '098754'){ //valida string inválidos
 			alert('¡Error! Contraseña inválida');
 			return false;
 		}else{
