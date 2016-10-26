@@ -8,7 +8,7 @@ function validateForm(){
 			alert('¡Error! El campo nombre no debe estar vacío');
 			return false;
 		}else if(nombre.substring(0,1) !== nombre.substring(0,1).toUpperCase()){
-			alert('¡Error! El primer caracter debe ser mayúscula');
+			alert('¡Error! El primer caracter del campo nombre debe ser mayúscula');
 			return false;
 		}else if( /[0-9]/.test(nombre)){
 			alert('¡Error! Sólo debe ingresar letras en el campo nombre');
@@ -27,7 +27,7 @@ function validateForm(){
 			alert('¡Error! El campo apellido no debe estar vacío');
 			return false;
 		}else if(apellido.substring(0,1) !== apellido.substring(0,1).toUpperCase()){
-			alert('¡Error! El primer caracter debe ser mayúscula');
+			alert('¡Error! El primer caracter del campo apellido debe ser mayúscula');
 			return false;
 		}else if( /[0-9]/.test(apellido)){
 			alert('¡Error! Sólo debe ingresar letras en el campo apellido');
